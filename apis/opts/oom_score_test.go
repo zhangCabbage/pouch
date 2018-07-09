@@ -16,7 +16,7 @@ func TestValidateOOMScore(t *testing.T) {
 		// TODO: Add test cases.
 		{-1001, fmt.Errorf("oom-score-adj should be in range [-1000, 1000]")},
 		{0, nil},
-		{1001, fmt.Errorf("oom-score-adj should be in range [-1000, 1000]")}
+		{1001, fmt.Errorf("oom-score-adj should be in range [-1000, 1000]")},
 	}
 	for _, tt := range tests {
 		res := ValidateOOMScore(tt.score)
