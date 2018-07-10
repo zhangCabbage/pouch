@@ -172,7 +172,7 @@ func TestVolumePath(t *testing.T) {
 	}
 
 	// Test2
-	s, err := core.VolumePath(nil)
+	s, err = core.VolumePath(nil)
 	fmt.Println(s)
 	if err == nil {
 		t.Fatal("expect get driver not found error, but err is nil")
