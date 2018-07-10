@@ -5,7 +5,6 @@ import (
 	"os"
 	"path"
 	"testing"
-	"fmt"
 
 	"github.com/alibaba/pouch/storage/volume/driver"
 	"github.com/alibaba/pouch/storage/volume/types"
