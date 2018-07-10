@@ -5,6 +5,7 @@ import (
 	"os"
 	"path"
 	"testing"
+	"fmt"
 
 	"github.com/alibaba/pouch/storage/volume/driver"
 	"github.com/alibaba/pouch/storage/volume/types"
@@ -72,7 +73,8 @@ func TestGetVolume(t *testing.T) {
 	defer driver.Unregister(volumeDriverName)
 
 	// Test1: get volume return nil
-	_, err = core.GetVolume(types.VolumeID{Name: "test1", Driver: volumeDriverName})
+	v, err = core.GetVolume(types.VolumeID{Name: "testGetVolume", Driver: volumeDriverName})
+	fmt.Println(v)
 	if err == nil {
 		t.Fatal("expect get driver not found error, but err is nil")
 	}
